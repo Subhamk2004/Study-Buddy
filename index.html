@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/book.png" type="image/x-icon">in
+</head>
+<body>
+<div class="container">
+    <div class="blur_effect"></div>
+    <div id="logo">Study Buddy <img id="logo_img" src="images/stopwatch.png" alt="animated book logo"></div>
+    <div class = "timer_div">
+        <h2>Start studying</h2>
+        <span id="timer_input">
+            <input type="text" id="minute_input" value="30">
+            <input id="colon" value=":">
+            <input type="text" id="seconds_input" value="00">
+        </span>
+        <div class="button_div">
+            <button id="start">
+                <img class="control_imgs" src="images/start.png" alt="">
+                Start
+            </button>
+            <button id="pause">
+                <img src="images/pause.png" class="control_imgs">
+                Pause
+            </button>
+            <button id="reset">
+                <img src="images/reset.png" class='control_imgs'>
+                Reset
+            </button>
+        </div>
+    </div>
+    <span id="warning"></span>
+    <div class="break_div">
+        <h2>Take a break?</h2>
+        <span id="break_input">
+            <input type="text" id="minute_break_input" value="5">
+            <input id="colon_break" value=":">
+            <input type="text" id="seconds_break_input" value="00">
+        </span>
+        <button id="break_button">Take a break</button>
+    </div>
+    <audio preload="auto" id="break_audio" >
+        <source src="audios/break_audio.mp3" type = "audio/mpeg">
+    </audio>
+    <audio preload="auto" id="start_audio" >
+        <source src="audios/started.mp3" type = "audio/mpeg">
+    </audio>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
