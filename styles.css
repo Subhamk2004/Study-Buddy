@@ -1,9 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url("images/bg3.jpg");
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -12,9 +14,10 @@ body{
     font-family: sans-serif;
     flex-direction: column;
 }
+
 /*********  MAIN   **************/
 
-#logo{
+#logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,11 +31,11 @@ body{
     gap: 13px;
 }
 
-#logo img{
+#logo_img {
     width: min(5.5vw, 70px);
 }
 
-.container{
+.container {
     width: 80%;
     height: auto;
     /*background-color: #b8e8b8;*/
@@ -44,7 +47,8 @@ body{
     /*justify-content: center;*/
     flex-direction: column;
 }
-.blur_effect{
+
+.blur_effect {
     height: 100%;
     width: 100%;
     background-color: #ffffff;
@@ -54,7 +58,9 @@ body{
     z-index: -1;
     border-radius: 15px;
 }
-.timer_div, .break_div{
+
+.timer_div,
+.break_div {
     margin-top: 50px;
     background-color: white;
     width: min(50%, 600px);
@@ -65,36 +71,52 @@ body{
     overflow: hidden;
     margin-bottom: 50px;
 }
-#timer_input, #break_input{
+
+#timer_input,
+#break_input {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: 70px;
 }
-#minute_input, #break_input, #seconds_input, #colon, #minute_break_input, #seconds_break_input, #colon_break{
+
+#minute_input,
+#break_input,
+#seconds_input,
+#colon,
+#minute_break_input,
+#seconds_break_input,
+#colon_break {
     border: none;
-    -moz-appearance: textfield; /* to remove the arrows that appear in input type number*/
+    -moz-appearance: textfield;
+    /* to remove the arrows that appear in input type number*/
     outline: none;
     margin-top: 20px;
     width: 33%;
     text-align: center;
-    font-weight:520;
+    font-weight: 520;
     height: 70px;
     font-size: 70px;
     margin-bottom: 30px;
 }
-#colon, #colon_break{
+
+#colon,
+#colon_break {
     width: 20px;
 }
-#minute_break_input, #seconds_break_input{
+
+#minute_break_input,
+#seconds_break_input {
     width: 90px;
 }
-.timer_div h2, .break_div h2{
+
+.timer_div h2,
+.break_div h2 {
     margin-top: 20px;
 }
 
-.button_div{
+.button_div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -102,7 +124,9 @@ body{
     margin-bottom: 30px;
     gap: 10%;
 }
-.button_div button, .break_div button{
+
+.button_div button,
+.break_div button {
     font-size: 20px;
     border: none;
     border-radius: 10px;
@@ -119,38 +143,72 @@ body{
     cursor: pointer;
     transition: .4s all ease-in-out;
 }
-.button_div button:hover{
+
+.button_div button:hover {
     width: 140px;
     height: 50px;
     box-shadow: 0 0 20px #3edd14;
 }
-#break_input{
+
+#break_input {
     font-size: 50px;
 }
-.break_div button{
+
+.break_div button {
     width: 150px;
     margin-bottom: 15px;
 }
-.break_div button:hover{
+
+.break_div button:hover {
     width: 160px;
     height: 50px;
     box-shadow: 0 0 20px #dd1414;
 }
-.break_div{
+
+.break_div {
     display: none;
 }
-#warning{
+
+#warning {
     color: #b60707;
     margin-bottom: 10px;
 }
 
-#pause, #reset{
+#pause,
+#reset {
     display: none;
 }
-.control_imgs{
+
+.control_imgs {
     width: 30px;
 }
 
 
 /***************responsive view****************/
 
+
+@media screen and (max-width:500px) {
+    .container {
+        width: 85%;
+        gap: 0;
+        height: 400px;
+    }
+
+
+    #logo {
+        font-size: 30px;
+        background: linear-gradient(50deg, #0b290b, #3982e0, #045301);
+        background-clip: text;
+        color: transparent;
+    }
+
+    #logo_img {
+        width: 40px;
+    }
+    .timer_div, .break_div{
+        width: 90%;
+        height: 240px;
+        margin-bottom: -10px;
+    }
+
+}

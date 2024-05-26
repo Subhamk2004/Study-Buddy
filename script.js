@@ -19,6 +19,11 @@ start_timer.addEventListener('click', function (){
 })
 //
 start_timer.addEventListener("click", function() {
+   let device_width = window.innerWidth;
+   if(device_width<=500)
+      {
+         document.querySelector('.container').style.height = "90%";
+      }
    start_timer.style.display = "none";
    pause_button.style.display = "flex";
    reset_button.style.display = "flex";
@@ -142,6 +147,11 @@ reset_button.addEventListener('click', function (){
    breaker_div.style.display = "none";
    start_timer.style.display = "flex";
    seconds.value = 0;
+   let device_width = window.innerWidth;
+   if(device_width<=500)
+      {
+         document.querySelector('.container').style.height = "400px";
+      }
 })
 
 break_button.addEventListener('click', function(e) {
@@ -157,4 +167,9 @@ break_button.addEventListener('click', function(e) {
    let second = Number(seconds.value);
    start_break_function(break_minute, break_second, minute, second);
    break_audio.play();
+   let device_width = window.innerWidth;
+   if(device_width<=500)
+      {
+         document.querySelector('.container').style.height = "400px";
+      }
 });
